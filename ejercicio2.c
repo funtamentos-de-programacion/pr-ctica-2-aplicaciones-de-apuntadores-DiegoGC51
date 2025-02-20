@@ -10,6 +10,7 @@ int main () {
   printf("Dirección del arreglo en la primera posición: %x\n",&arr[0]);
   // imprime la dirección de memoria del arreglo  (el nombre del arreglo es un apuntador)
   printf("Dirección del arreglo: %x\n",&arr);
+  printf("Dirección del arreglo: %x\n", arr);
   // imprime la dirección de memoria almacenada en el apuntador apArr
   printf("Dirección almacenada en el apuntador: %x\n",apArr);
 
@@ -25,13 +26,17 @@ int main () {
     printf("Elemento %d: %d\n", i, *(ptr + i));
   }
 
-  //Modifica apArr para que apunte al tercer elemento
+  //Modifica apArr para que apunte al cuarto elemento
+  apArr= &arr[3];
 
   //Accede al elemento con indice -2 usando el apuntador
-
+  printf("Elemento -2: %d\n", apArr[-2]);
+  printf("Elemento 0: %d\n", apArr[0]);
   //Ajusta el ciclo for para que se pueda recorrer completo el arreglo de acuerdo al elemento apuntado
-  for (int i = ??; i < ??; ???) {
+  for (int i = -3; i < 2; i++) {
     printf("Elemento %d: %d\n", i, *(ptr + i));
   }
+
+  apArr= &arr[4];
   return 0;
 }
